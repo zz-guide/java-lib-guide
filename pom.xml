@@ -8,8 +8,10 @@
     <artifactId>java-library-learn</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-xml</module>
-        <module>spring-anno</module>
+        <module>spring-t-xml</module>
+        <module>spring-t-anno</module>
+        <module>spring-t-mvc</module>
+        <module>spring-t-aop</module>
     </modules>
     <version>1.0-SNAPSHOT</version>
 
