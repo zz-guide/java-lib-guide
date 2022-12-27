@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd" default-lazy-init="false">
+
+    <!--id bean唯一标识-->
+    <!--name bean别名，可以配置多个-->
+    <!--scope singleton,prototype,单例还是每次都新创建-->
+    <!--lazy-init 配置文件加载的时候要不要初始化,优先级较高-->
+    <!--default-lazy-init 配配置在beans标签，优先级较低，兜底-->
+    <!--autowire byName byType方式加载-->
+    <!--factory-method Class.forName第三方使用-->
+    <bean id="demo" class="com.xulei.pojo.Demo"
+          name="demoA,demoB"
+          scope="singleton"
+          lazy-init="false"
+          init-method="initMethod"
+          destroy-method="destroyMethod"/>
+    <!--alias标签起别名-->
+    <alias name="demo" alias="demoC"/>
+
+    <!--测试依赖注入-->
+    <bean id="demoDao" class="com.xulei.dao.demo.DemoDaoImpl"/>
+    <bean id="demoService" class="com.xulei.service.demo.DemoServiceImpl">
+        <!--property 标签 通过set方法注入属性，name代表类中的属性名称，ref引用xml中的id-->
+        <!--类中必须存在对应的set方法才可以成功注入-->
+        <!--        Bean property 'userDao' is not writable or has an invalid setter method.-->
+        <property name="demoDao" ref="demoDao"/>
+        <!--构造器有三种注入方式，只能使用其中的一种，不能同时使用-->
+        <!--index代表构造函数参数位置，从0开始-->
+        <constructor-arg index="0" type="java.lang.String" value="路人甲Java"/>
+        <constructor-arg index="1" type="int" value="123"/>
+        <!--        <constructor-arg ref="userDao"/>-->
+        <!--        <constructor-arg type="java.lang.String" value="42"/>-->
+    </bean>
+</beans>
