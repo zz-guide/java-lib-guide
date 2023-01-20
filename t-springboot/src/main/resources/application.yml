@@ -1,0 +1,12 @@
+server:
+  port: 8555
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.105.50.31:3306/myboot?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    username: root
+    password: xl123456?
+  sql:
+    init:
+      schema-locations: classpath:db/schema-h2.sql
+      data-locations: classpath:db/data-h2.sql
