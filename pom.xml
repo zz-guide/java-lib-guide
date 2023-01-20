@@ -8,15 +8,17 @@
     <artifactId>java-library-learn</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-t-xml</module>
-        <module>spring-t-anno</module>
-        <module>spring-t-mvc</module>
-        <module>spring-t-aop</module>
-        <module>redission-t</module>
-        <module>netty-t</module>
-        <module>springboot-t</module>
-        <module>mybatis-plus-t</module>
-        <module>mybatis-t</module>
+        <module>t-spring-xml</module>
+        <module>t-spring-annotation</module>
+        <module>t-spring-mvc</module>
+        <module>t-spring-aop</module>
+        <module>t-redission</module>
+        <module>t-netty</module>
+        <module>t-springboot</module>
+        <module>t-mybatis-plus</module>
+        <module>t-mybatis</module>
+        <module>t-web</module>
+        <module>t-library</module>
     </modules>
     <version>1.0-SNAPSHOT</version>
 
