@@ -12,6 +12,13 @@
     <artifactId>mybatis</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -21,10 +28,23 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss</groupId>
+            <artifactId>jboss-vfs</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

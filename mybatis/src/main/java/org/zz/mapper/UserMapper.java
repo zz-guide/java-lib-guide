@@ -1,22 +1,22 @@
 package org.zz.mapper;
 
-import org.zz.pojo.User;
+import org.zz.domain.User;
 
 import java.util.List;
-import java.util.Map;
 
 public interface UserMapper {
-    List<User> getAll();
+    public int insert(User user);
 
-    User findById(int id);
+    public int batchInsert(List<User> users);
 
-    List<User> selectByCondition(Map<?, ?> map);
+    public int deleteById(Long id);
+    public int deleteByIds(Long[] ids);
+    public int updateById(User user);
 
-    int add(User user);
+    public List<User> getList();
+    public User getById(Long id);
+    public List<User> getByIds(Long[] ids);
 
-    int batchAdd(List<User> users);
-
-    int update(User user);
-
-    int deleteById(int id);
+    public User getByIdWithLeftJoin(Long id);
 }
+
