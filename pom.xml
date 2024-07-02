@@ -7,20 +7,16 @@
     <groupId>org.zz</groupId>
     <artifactId>java-lib-guide</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>mybatis</module>
-    </modules>
+
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <mybatis.version>3.5.15</mybatis.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.10.2</junit.jupiter.version>
-        <mysql.connector.j.version>8.3.0</mysql.connector.j.version>
         <lombok.version>1.18.32</lombok.version>
-        <logback.version>1.5.4</logback.version>
-        <jboss.vfs.version>3.3.2.Final</jboss.vfs.version>
     </properties>
 
     <dependencyManagement>
@@ -33,20 +29,6 @@
                 <scope>test</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-            <dependency>
-                <groupId>com.mysql</groupId>
-                <artifactId>mysql-connector-j</artifactId>
-                <version>${mysql.connector.j.version}</version>
-            </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -55,21 +37,38 @@
                 <scope>provided</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.jboss/jboss-vfs -->
-            <dependency>
-                <groupId>org.jboss</groupId>
-                <artifactId>jboss-vfs</artifactId>
-                <version>${jboss.vfs.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>nexus-aliyun</id>
+            <name>nexus-aliyun</name>
+            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**/*.xml</include>
+                    <include>**/**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>
