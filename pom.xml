@@ -4,9 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.zz</groupId>
+    <groupId>org.zz.lib.guide</groupId>
     <artifactId>java-lib-guide</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>learn-easyexcel</module>
+        <module>learn-easypoi</module>
+        <module>learn-fastjson2</module>
+        <module>learn-jackson</module>
+        <module>learn-gson</module>
+        <module>learn-hutool</module>
+    </modules>
 
     <version>1.0-SNAPSHOT</version>
 
@@ -15,6 +23,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <junit.jupiter.version>5.10.2</junit.jupiter.version>
         <lombok.version>1.18.32</lombok.version>
     </properties>
@@ -26,7 +35,6 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
                 <version>${junit.jupiter.version}</version>
-                <scope>test</scope>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
