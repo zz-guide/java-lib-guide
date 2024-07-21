@@ -25,6 +25,7 @@
         <module>learn-encryption-algorithm/learn-aes</module>
         <module>learn-encryption-algorithm/learn-des</module>
         <module>learn-encryption-algorithm/learn-dsa</module>
+        <module>learn-redis/learn-jedis</module>
     </modules>
 
     <version>1.0-SNAPSHOT</version>

@@ -2,6 +2,10 @@
 java第三方库学习
 
 ## roadmap
+
+### learn-utils
+- [x] 借鉴大佬们封装的工具类集合
+
 ### excel读写
 - [x] [EasyPoi](https://gitee.com/wupaas/easypoi)
 - [x] [EasyExcel](https://easyexcel.opensource.alibaba.com/)
@@ -27,3 +31,6 @@ java第三方库学习
 - [ ] [DES]()
 - [ ] [RSA]()
 - [ ] [DSA]()
+
+### redis
+- [ ] [jedis]()
