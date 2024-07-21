@@ -8,12 +8,23 @@
     <artifactId>java-lib-guide</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>learn-easyexcel</module>
-        <module>learn-easypoi</module>
-        <module>learn-fastjson2</module>
-        <module>learn-jackson</module>
-        <module>learn-gson</module>
-        <module>learn-hutool</module>
+        <module>learn-excel/learn-easyexcel</module>
+        <module>learn-excel/learn-easypoi</module>
+        <module>learn-json/learn-fastjson2</module>
+        <module>learn-json/learn-jackson</module>
+        <module>learn-json/learn-gson</module>
+        <module>learn-tool/learn-hutool</module>
+        <module>learn-tool/learn-commons</module>
+        <module>learn-tool/learn-guava</module>
+        <module>learn-jwt</module>
+        <module>learn-utils</module>
+        <module>learn-encryption-algorithm/learn-rsa</module>
+        <module>learn-encryption-algorithm/learn-md5</module>
+        <module>learn-encryption-algorithm/learn-base64</module>
+        <module>learn-encryption-algorithm/learn-sha</module>
+        <module>learn-encryption-algorithm/learn-aes</module>
+        <module>learn-encryption-algorithm/learn-des</module>
+        <module>learn-encryption-algorithm/learn-dsa</module>
     </modules>
 
     <version>1.0-SNAPSHOT</version>
