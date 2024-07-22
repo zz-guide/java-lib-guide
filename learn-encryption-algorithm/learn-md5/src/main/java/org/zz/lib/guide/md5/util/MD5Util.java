@@ -1,26 +1,23 @@
-package org.zz.lib.guide.md5.utils;
+package org.zz.lib.guide.md5.util;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.math.BigInteger;
+import org.zz.lib.guide.hex.util.HexUtil2;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class MD5Utils {
-    private static volatile MD5Utils instance = null;
+public class MD5Util {
+    private static volatile MD5Util instance = null;
 
-    private MD5Utils() {
+    private MD5Util() {
         super();
     }
 
-    public static MD5Utils getInstance() {
+    public static MD5Util getInstance() {
         if (instance == null) {
-            synchronized (MD5Utils.class) {
+            synchronized (MD5Util.class) {
                 if (instance == null) {
-                    instance = new MD5Utils();
+                    instance = new MD5Util();
                 }
             }
         }
@@ -42,7 +39,7 @@ public class MD5Utils {
 
         MessageDigest md = getMessageDigest();
         byte[] res = md.digest(original);
-        System.out.println("md getDigestLength():"+md.getDigestLength());
+        System.out.println("md5 摘要长度 getDigestLength() 字节数:"+md.getDigestLength());
         return res;
     }
 
@@ -60,45 +57,32 @@ public class MD5Utils {
         return md5(original.getBytes(StandardCharsets.UTF_8));
     }
 
-    public String md5hex(final byte[] original) {
-        return new BigInteger(1, md5(original)).toString(16);
-    }
-
-    public String md5hex(final String original, final Charset charset) {
+    public String md5LowerHex(final String original, final Charset charset) {
         if (original == null) {
             return null;
         }
-        return md5hex(original.getBytes(charset));
+
+        return HexUtil2.bytes2HexLower(md5(original.getBytes(charset)));
     }
 
-    public String md5hex(final String original) {
+    public String md5LowerHex(final String original) {
         if (original == null) {
             return null;
         }
-        return md5hex(original.getBytes(StandardCharsets.UTF_8));
+        return HexUtil2.bytes2HexLower(md5(original.getBytes(StandardCharsets.UTF_8)));
     }
 
-    public byte[] md5(final InputStream original) throws IOException {
+    public String md5UpperHex(final String original, final Charset charset) {
         if (original == null) {
             return null;
         }
-        final byte[] buffer = new byte[1024];
-        MessageDigest digest = getMessageDigest();
-        try (InputStream input = new BufferedInputStream(original)) {
-            int read;
-            while ((read = input.read(buffer)) != -1) {
-                digest.update(buffer, 0, read);
-            }
-        }
-        return digest.digest();
+        return HexUtil2.bytes2HexUpper(md5(original.getBytes(charset)));
     }
 
-    public String md5hex(final InputStream original) throws IOException {
-        byte[] bytes = md5(original);
-        if (bytes == null) {
+    public String md5UpperHex(final String original) {
+        if (original == null) {
             return null;
         }
-        return md5hex(bytes);
+        return HexUtil2.bytes2HexUpper(md5(original.getBytes(StandardCharsets.UTF_8)));
     }
-
 }

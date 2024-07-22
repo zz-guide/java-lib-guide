@@ -28,9 +28,9 @@ public class WebJwtProperties {
 
     private RSAPrivateKey privateKey;
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        publicKey = (RSAPublicKey) RSAUtils.loadRSAX509PublicKey(publicKeyPath);
-        privateKey = (RSAPrivateKey) RSAUtils.loadRSAPKCS8PrivateKey(privateKeyPath);
-    }
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        publicKey = (RSAPublicKey) RSAUtils.loadRSAX509PublicKey(publicKeyPath);
+//        privateKey = (RSAPrivateKey) RSAUtils.loadRSAPKCS8PrivateKey(privateKeyPath);
+//    }
 }

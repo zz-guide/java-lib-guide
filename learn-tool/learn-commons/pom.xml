@@ -7,6 +7,7 @@
         <groupId>org.zz.lib.guide</groupId>
         <artifactId>java-lib-guide</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <groupId>org.zz.lib.guide.commons</groupId>
@@ -56,6 +57,12 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>1.5</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
         </dependency>
 
     </dependencies>

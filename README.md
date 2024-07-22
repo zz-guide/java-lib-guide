@@ -25,9 +25,11 @@ java第三方库学习
 - [x] [guava]()
 
 ### 加密算法
-- [ ] [MD5]()
-- [ ] [SHA]()
-- [ ] [AES]()
+- [x] learn-hex byte转16进制表示
+- [x] [MD5]()
+- [x] [BASE64]()
+- [x] [SHA]() sha,sha3
+- [x] [AES]()
 - [ ] [DES]()
 - [ ] [RSA]()
 - [ ] [DSA]()

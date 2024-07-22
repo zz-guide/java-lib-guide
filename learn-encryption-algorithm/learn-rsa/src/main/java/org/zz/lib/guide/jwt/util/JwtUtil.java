@@ -1,16 +1,10 @@
-package org.zz.lib.guide.jwt.utils;
-
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import org.zz.lib.guide.jwt.config.WebJwtProperties;
-
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-
-public class JwtUtils {
+//package org.zz.lib.guide.jwt.util;
+//
+//import java.time.Instant;
+//import java.time.ZoneId;
+//import java.time.ZoneOffset;
+//
+//public class JwtUtil {
 //    private static final ZoneOffset ZONE_OFFSET = ZoneId.systemDefault().getRules().getOffset(Instant.now());
 //
 //    /**
@@ -55,4 +49,4 @@ public class JwtUtils {
 //                .build()
 //                .verify(token);
 //    }
-}
+//}

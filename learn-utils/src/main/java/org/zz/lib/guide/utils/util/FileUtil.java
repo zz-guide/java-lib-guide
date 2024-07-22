@@ -1,4 +1,4 @@
-package org.zz.lib.guide.utils.utils;
+package org.zz.lib.guide.utils.util;
 
 import org.zz.lib.guide.utils.enums.Encoding;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class FileUtils {
+public class FileUtil {
     public static boolean exist(String path) {
         return getFile(path).exists();
     }
@@ -241,7 +241,6 @@ public class FileUtils {
             }
             return outputStream.toByteArray();
         } catch (IOException e) {
-            log.error(e.getMessage(), e);
             throw e;
         }
     }

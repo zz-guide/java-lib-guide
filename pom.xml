@@ -25,6 +25,7 @@
         <module>learn-encryption-algorithm/learn-aes</module>
         <module>learn-encryption-algorithm/learn-des</module>
         <module>learn-encryption-algorithm/learn-dsa</module>
+        <module>learn-encryption-algorithm/learn-hex</module>
         <module>learn-redis/learn-jedis</module>
     </modules>
 
@@ -38,6 +39,7 @@
 
         <junit.jupiter.version>5.10.2</junit.jupiter.version>
         <lombok.version>1.18.32</lombok.version>
+        <commons.codec.version>1.17.1</commons.codec.version>
     </properties>
 
     <dependencyManagement>
@@ -55,6 +57,13 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons.codec.version}</version>
             </dependency>
 
         </dependencies>
