@@ -3,8 +3,20 @@ java第三方库学习
 
 ## roadmap
 
-### learn-utils
-- [x] 借鉴大佬们封装的工具类集合
+### learn-common
+- [x] 封装了各种 util类
+- [x] learn-hex byte[] 16进制 相互转化
+
+### 常用加密算法
+- [x] [MD2]()
+- [x] [MD5]()
+- [x] [BASE64]()
+- [x] [SHA]() SHA, SHA3
+- [x] [AES]()
+- [x] [DES]() DES,DESEDE
+- [x] [RSA]()
+- [x] [DSA]()
+- [x] [HMAC]()
 
 ### excel读写
 - [x] [EasyPoi](https://gitee.com/wupaas/easypoi)
@@ -12,7 +24,7 @@ java第三方库学习
 
 ### 授权
 - [ ] [Sa-Token](https://sa-token.cc/)
-- [ ] [jwt]()
+- [x] [jwt]()
 
 ### json
 - [x] [fastjson2](https://github.com/alibaba/fastjson2)
@@ -24,15 +36,6 @@ java第三方库学习
 - [x] [commons系列]()
 - [x] [guava]()
 
-### 加密算法
-- [x] learn-hex byte转16进制表示
-- [x] [MD5]()
-- [x] [BASE64]()
-- [x] [SHA]() sha,sha3
-- [x] [AES]()
-- [ ] [DES]()
-- [ ] [RSA]()
-- [ ] [DSA]()
-
 ### redis
-- [ ] [jedis]()
+- [x] [jedis](https://github.com/redis/jedis)
+- [x] [redisson](https://github.com/redisson/redisson)

@@ -1,8 +1,15 @@
 package org.zz.lib.guide.jwt.config;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class WebJwtProperties {
     /**
      * 公钥路径
@@ -17,20 +24,14 @@ public class WebJwtProperties {
     /**
      * 有效时间
      */
-    private Long effectiveTimeSeconds = 3600L;
+    private Long effectiveTimeSeconds = 0L;
 
     /**
      * JWT签发者
      */
-    private String issuer = "https://www.my-website.com";
+    private String issuer = "https://www.zz.org";
 
     private RSAPublicKey publicKey;
 
     private RSAPrivateKey privateKey;
-
-//    @Override
-//    public void afterPropertiesSet() throws Exception {
-//        publicKey = (RSAPublicKey) RSAUtils.loadRSAX509PublicKey(publicKeyPath);
-//        privateKey = (RSAPrivateKey) RSAUtils.loadRSAPKCS8PrivateKey(privateKeyPath);
-//    }
 }
