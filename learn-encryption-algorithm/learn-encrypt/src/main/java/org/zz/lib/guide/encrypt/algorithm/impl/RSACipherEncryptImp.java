@@ -60,25 +60,25 @@ public class RSACipherEncryptImp extends CipherEncryptImpl<RSAEnum> {
     }
 
     /**
-     * 根据slatKey获取公匙，传入的slatKey作为SecureRandom的随机种子
+     * 根据saltKey获取公匙，传入的saltKey作为SecureRandom的随机种子
      * 若使用new SecureRandom()创建公匙，则需要记录下私匙，解密时使用
      */
-    private static byte[] getPublicKey(String slatKey) throws Exception {
+    private static byte[] getPublicKey(String saltKey) throws Exception {
         KeyPairGenerator keyPairGenerator  = KeyPairGenerator.getInstance(RSA_ALGORITHM_NAME);
         SecureRandom random = SecureRandom.getInstance(SECURE_RANDOM_ALGORITHM);
-        random.setSeed(slatKey.getBytes());
+        random.setSeed(saltKey.getBytes());
         keyPairGenerator.initialize(SALT_KEY_LENGTH, random);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
         return keyPair.getPublic().getEncoded();
     }
 
     /**
-     * 根据slatKey获取私匙，传入的slatKey作为SecureRandom的随机种子
+     * 根据saltKey获取私匙，传入的saltKey作为SecureRandom的随机种子
      */
-    private static byte[] getPrivateKey(String slatKey) throws Exception {
+    private static byte[] getPrivateKey(String saltKey) throws Exception {
         KeyPairGenerator keyPairGenerator  = KeyPairGenerator.getInstance(RSA_ALGORITHM_NAME);
         SecureRandom random = SecureRandom.getInstance(SECURE_RANDOM_ALGORITHM);
-        random.setSeed(slatKey.getBytes());
+        random.setSeed(saltKey.getBytes());
         keyPairGenerator.initialize(SALT_KEY_LENGTH, random);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
         return keyPair.getPrivate().getEncoded();

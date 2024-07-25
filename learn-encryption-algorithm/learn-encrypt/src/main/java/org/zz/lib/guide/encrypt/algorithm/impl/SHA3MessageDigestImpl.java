@@ -27,10 +27,10 @@ public class SHA3MessageDigestImpl extends MessageDigestImpl<SHA3Enum> {
 
 
     @Override
-    protected byte[] encrypt(String content, String salt, SHA3Enum encryptType) {
+    protected byte[] encrypt(String content, String salt, SHA3Enum algorithm) {
         try {
             String encryptContent = String.format("%s%s", content == null ? "" : content, salt == null ? "" : salt);
-            MessageDigest messageDigest = MessageDigest.getInstance(encryptType.getAlgorithm());
+            MessageDigest messageDigest = MessageDigest.getInstance(algorithm.getAlgorithm());
             return messageDigest.digest(encryptContent.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
             logger.log(Level.INFO, "SHA3MessageDigestImpl encrypt error: {0}", new Object[]{e.getMessage()});

@@ -24,7 +24,7 @@ public class WebJwtProperties {
     /**
      * 有效时间
      */
-    private Long effectiveTimeSeconds = 0L;
+    private Long effectiveTimeSeconds = 3600L;
 
     /**
      * JWT签发者

@@ -53,5 +53,10 @@
             <version>${java.jwt.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>jwks-rsa</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
